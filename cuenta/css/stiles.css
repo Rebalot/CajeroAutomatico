@@ -1,0 +1,230 @@
+@font-face {
+    font-family: 'Fuente1';
+    src: url('/fonts/Montserrat/Montserrat-VariableFont_wght.ttf') format('truetype');
+    /* Agrega más formatos según sea necesario, como .ttf, .otf, etc. */
+}
+@font-face {
+    font-family: 'Fuente2';
+    src: url('/fonts/Montserrat/Montserrat-Italic-VariableFont_wght.ttf') format('truetype');
+    /* Agrega más formatos según sea necesario, como .ttf, .otf, etc. */
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Fuente1', sans-serif;
+    
+}
+body{
+    overflow-x: hidden;
+    min-height: 100vh;
+}
+header{
+    position: fixed;
+    z-index: 999;
+}
+
+.home{
+    height: 80px;
+    width: 100vw;
+    background-color: rgb(92, 115, 141);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.logo{
+    margin-left: 20px;
+    display: flex;
+
+}
+/* .logoImg{
+    width: 40px;
+    height: 40px;
+} */
+.logoBrand{
+    padding-left: 20px;
+    align-self: center;
+}
+.logoBrand span{
+    font-weight: 700;
+    color: white;
+    font-size: 25px;
+}
+.logoBrand span.second{
+    color: rgb(80, 80, 80);
+}
+.perfil{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    height: 100%;
+    width: 150px;
+    padding-right: 20px;
+    background-color: rgb(121, 142, 168);
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.perfilTexto{
+    display: flex;
+    flex-direction: column;
+    color: white;
+    font-weight: 600;
+}
+.perfilTexto span{
+    color: rgb(80, 80, 80);
+    margin-top: 5px;
+}
+.perfilDesple{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    height: 30px;
+    width: 30px;
+}
+.perfilDesple svg{
+    margin-top: 2px;
+}
+.perfilDesple:hover{
+    transition: ease 0.3s;
+    background-color: rgb(112, 112, 112);
+}
+.tuCuenta_container{
+    background-color: white;
+    padding-top: 40px;
+    padding-bottom: 20px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 1044px;
+}
+.tuCuenta{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+.tabs{
+    margin-top: 15px;
+    background-image: linear-gradient(to bottom,transparent 0%, rgba(68, 68, 68, 0.5) 100%);
+    display: flex;
+    justify-content: space-between;
+    height: 60px;
+    padding: 20px 30px 10px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    
+}
+.tabs button{
+    background-color: transparent;
+    border: none;
+    font-size: 18px;
+    height: 30px;
+}
+.tabs button:hover{
+    border-bottom: 2px solid white;
+}
+.tabs button.active{
+    border-bottom: 2px solid rgb(92, 115, 141);
+}
+.hide{
+    display: none !important;
+}
+main{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 288px;
+    position: absolute;
+    width: 100vw;
+}
+.article_container{
+    width: 1044px;
+    min-height: calc(100vh - 288px);
+    display: flex;
+}
+.article_container article{
+    min-height: 100%;
+    width: 100%;
+}
+.article_container article h3{
+    border-bottom: 7px ridge rgb(61, 61, 61);
+    color: black;
+    
+}
+.operaciones_grid{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding-top: 5px;
+    height: 100%;
+    max-height: calc(100vh - 318px);
+}
+.operaciones_listado{
+    width: fit-content;
+    padding-right: 50px;
+    border-right: 1px dashed black;
+}
+.operaciones_listado ul{
+    margin-top: 20px;
+    list-style-type: none;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    
+}
+
+.operaciones_listado button{
+    width: 250px;
+    height: 80px;
+}
+.operacion_container{
+    display: flex;
+    background-color: rgba(163, 163, 163, 0.6);
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    align-items: center;
+    width: fit-content;
+    height: fit-content;
+}
+.operacion_container.input{
+    flex-direction: column;
+    gap: 18px;
+}
+.operacion_container p{
+    font-weight: bold;
+    font-size: 20px;
+}
+.operaciones_accion{
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+.operacionSpan{
+    margin-left: 20px;
+    width: 150px;
+    height: 50px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 5px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.operacionSpan svg{
+    margin-left: 20px;
+}
+.operacionSpan span{
+    font-size: 20px;
+}
+.monto{
+    display: flex;
+    align-items: center;
+}
+.monto input{
+    height: 40px;
+    font-size: 15px;
+    width: 150px;
+    padding-left: 10px;
+}
+.operacion_container button{
+    height: 25px;
+    width: 80px;
+}
